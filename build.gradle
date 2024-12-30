@@ -1,6 +1,5 @@
 import com.modrinth.minotaur.TaskModrinthUpload
 
-import java.lang.module.ModuleDescriptor
 
 plugins {
 	id 'fabric-loom' version '1.9-SNAPSHOT'
