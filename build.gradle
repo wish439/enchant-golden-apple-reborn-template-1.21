@@ -1,10 +1,9 @@
-import com.modrinth.minotaur.TaskModrinthUpload
 
 
 plugins {
 	id 'fabric-loom' version '1.9-SNAPSHOT'
 	id 'maven-publish'
-	id "com.modrinth.minotaur" version "2.+"
+	//id "com.modrinth.minotaur" version "2.+"
 }
 
 version = project.mod_version
@@ -39,22 +38,6 @@ dependencies {
 	
 }
 // build.gradle
-modrinth {
-	token = System.getenv("MODRINTH_TOKEN") // 请记住设置 MODRINTH_TOKEN 环境变量，否则会失败 - 只需确保它保持私有即可！
-	projectId = "enchant-golden-apple-reborn" // This can be the project ID or the slug. Either will work!
-	versionNumber = "1.0.0" // You don't need to set this manually. Will fail if Modrinth has this version already
-	uploadFile = remapJar // With Loom, this MUST be set to `remapJar` instead of `jar`!
-	gameVersions = ["1.21"] // Must be an array, even with only one version
-	loaders = ["fabric"] // Must also be an array - no need to specify this if you're using Loom or ForgeGradle
-	dependencies {
-		required.project "fabric-api"// 在 Fabric API 上创建新的必需依赖项
-	}
-	// A special DSL for creating dependencies
-		//scope.type
-		//范围可以是 'required'、'optional'、'incompatible' 或 'embedded'
-		//类型可以是 'project' 或 'version'
-
-}
 
 processResources {
 	inputs.property "version", project.version
