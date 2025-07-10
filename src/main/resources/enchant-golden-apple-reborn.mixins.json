@@ -3,6 +3,7 @@
   "package": "com.wishtoday.er.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "ConsumableComponentsMixin",
     "FoodComponentsMixin"
   ],
   "injectors": {
