@@ -7,6 +7,5 @@ public class EnchantGoldenAppleReborn implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
 	}
 }
